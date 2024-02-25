@@ -1,2 +1,3 @@
 .venv
-*.json
+aiml24-gemini
+service_acc_key.json

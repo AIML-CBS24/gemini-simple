@@ -1,4 +1,4 @@
-## Getting stated with Gemini Pro
+## Getting started with Gemini Pro
 This sample project shows how to connect to Google's [Gemini Pro](https://cloud.google.com/vertex-ai/docs/generative-ai/model-reference/gemini) API through [Vertex AI](https://cloud.google.com/vertex-ai?hl=da). We want to go through Vertex AI because Denmark is not a [supported region](https://ai.google.dev/available_regions#available_regions) at the time of writing (25-02-2024). 
 
 So, to make it work, we circument the region restriction by setting the location to `us-central1` in the Vertex AI client. Like so:

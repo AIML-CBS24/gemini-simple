@@ -14,7 +14,20 @@ vertexai.init(
 ```
 
 ### Purpose
-All new sign-ups to Google Cloud recieve 300$ in free credits. You will have to put in a credit card, but you will **not** be automatically billed if you run out of token. This makes it a great way to get started with LLMs (and other cool stuff on Google Cloud)
+All new sign-ups to Google Cloud recieve 300$ in free credits. You will have to put in a credit card, but you will **not** be automatically billed if you run out of credits. Besides, 300$ of prompts is a **lot** of prompting. This makes it a great way to get started with LLMs (and other cool stuff) on Google Cloud
+
+### Cloning the repository
+To get started, you need to clone this repository to your local machine. For this you need to have [git](https://git-scm.com/) installed.
+You can clone the repo by running the following command in your terminal:
+
+``` bash
+# clone the repository
+git clone git@github.com:AIML-CBS24/gemini-simple.git
+
+# navigate to the root of the project
+cd gemini-simple
+```
+You can also download the repository as a zip file and extract it to your local machine, but we strongly recommend using git.
 
 ### Setting up your Vertex AI / GCP project
 
@@ -45,8 +58,15 @@ Here is a step by step guide:
 └── service_acc_key.json # <- place it here
 ```
 
-### Setting up your Python environment
-Now, I'm assuming you have Python and Anaconda/conda installed. If not, go to [python.org](https://www.python.org/downloads/) and download the latest version of Python. Then, go to [anaconda.com](https://www.anaconda.com/products/distribution) and download the latest version of Anaconda. (YouTube is your friend if you need help with the installation - Otherwise ask through Canvas or during the exercise lab)
+### Setting up your coding environment
+You have three options for setting up your coding environment:
+1. Visual Studio Code (VSC) (recommended) (needs Anaconda/conda installed)
+2. Jupyter Notebook (needs Anaconda/conda installed)
+3. Google Colab (no installation needed)
+
+
+#### Option 1: Visual Studio Code
+Now, I'm assuming you have Python, Visual Studio Code, and Anaconda/conda installed. If not, go to [python.org](https://www.python.org/downloads/) and download the latest version of Python. Then, go to [anaconda.com](https://www.anaconda.com/products/distribution) and download the latest version of Anaconda. Finally, go to [code.visualstudio.com](https://code.visualstudio.com/) and download the latest version of Visual Studio Code - *emember to click the _"add to Path" _ option in the installation guide. (YouTube is your friend if you need help with the installation - Otherwise ask through Canvas or during the exercise lab)
 
 Now, open a terminal and navigate to the root of this project. Then, run the following commands to create your virtual environment and install the required packages.
 
@@ -55,23 +75,36 @@ Now, open a terminal and navigate to the root of this project. Then, run the fol
 conda env create -f aiml24-gemini.yml --prefix=aiml24-gemini
 ```
 This will create a conda environment called `aiml24-gemini` with all the required packages in the root of this project. This is useful because VSC etc. will pick it up automatically.
+Then run the following to open the project in Visual Studio Code:
+``` bash
+code .
+```
+A directory called `aiml24-gemini` should now be created in the root of your project. This is where all the packages are installed. 
+
+You should also be able to open [Visual Studio Code directly from Anaconda Navigator](https://docs.anaconda.com/free/working-with-conda/ide-tutorials/vscode/) and then [upload the aiml24-gemini environment from there](https://server-docs.anaconda.com/en/latest/user/environment.html). You can of course also use any other Python IDE you like, but I recommend Visual Studio Code
+
+#### Option 2: Jupyter Notebook
+You will need to install Anaconda/conda. Then, you can run the following command to create your virtual environment and install the required packages.
 
 ``` bash
-# activate the environment - This should output a bunch of stuff
-conda activate /some/path/to/your/project/aiml24-gemini
+# create the environment
+conda env create -f aiml24-gemini.yml --prefix=aiml24-gemini
 ```
-A directory called `aiml24-gemini` should now be created in the root of your project. This is where all the packages are installed. Then, if you are using [Jupyter Notebook](https://jupyter.org/), you can run the following command, with the environment activated, to open Jupyter Notebook in your browser:
+A directory called `aiml24-gemini` should now be created in the root of your project. This is where all the packages are installed. Then, you can run the following command, with the environment activated, to open Jupyter Notebook in your browser:
 
 ``` bash
 jupyter notebook
 ```
 
-You should also be able to open [Visual Studio Code directly from Anaconda Navigator](https://docs.anaconda.com/free/working-with-conda/ide-tutorials/vscode/) and then [upload the aiml24-gemini environment from there](https://server-docs.anaconda.com/en/latest/user/environment.html). You can of course also use any other Python IDE you like, but I recommend Visual Studio Code
+#### Option 3: Google Colab
+Follow [this link](https://colab.research.google.com/drive/10SzKzkD3C-OvkyS4-97qrG8ODXDrtwbj?usp=sharing) to open the notebook in Google Colab. You will need to upload the `service_acc_key.json` file to the root of the project in Google Colab. All packkages should be installed by default, since both Colab and Vertex AI run on Google Cloud.
+
+***
 
 **Note**: If this is overwhelming, don't worry. You will have plenty of time to ask about it in the exercise lab.
 
 ### Running the code
-Assuming your environment is set up properly, you should be able to run the code in the `notebooks/prompting.ipynb` file. This is an Ipython notebook file which runs brilliantly in Visual Studio Code and, of course, Jupyter Notebook. Select your environment from the top right corner of VSC and run the code.
+Assuming your environment is set up properly, you should be able to run the code in the `notebooks/prompting.ipynb` file. This is an Ipython notebook file which runs brilliantly in Visual Studio Code and, of course, Jupyter Notebook. Select your environment from the top right corner of VSC and run the code, or if you are using Jupyter Notebook, just run the cells. Same goes for Google Colab.
 
 
 

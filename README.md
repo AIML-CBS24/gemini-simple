@@ -13,7 +13,7 @@ vertexai.init(
 ) 
 ```
 
-### Purpose
+### Purposed
 All new sign-ups to Google Cloud recieve 300$ in free credits. You will have to put in a credit card, but you will **not** be automatically billed if you run out of credits. Besides, 300$ of prompts is a **lot** of prompting. This makes it a great way to get started with LLMs (and other cool stuff) on Google Cloud
 
 ### Cloning the repository
@@ -105,14 +105,3 @@ Follow [this link](https://colab.research.google.com/drive/10SzKzkD3C-OvkyS4-97q
 
 ### Running the code
 Assuming your environment is set up properly, you should be able to run the code in the `notebooks/prompting.ipynb` file. This is an Ipython notebook file which runs brilliantly in Visual Studio Code and, of course, Jupyter Notebook. Select your environment from the top right corner of VSC and run the code, or if you are using Jupyter Notebook, just run the cells. Same goes for Google Colab.
-
-
-
-
-
-
-
-
-
-
-   
